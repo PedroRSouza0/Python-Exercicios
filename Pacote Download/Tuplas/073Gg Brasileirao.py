@@ -2,7 +2,7 @@ tabela = ('Botafogo', 'Palmeiras', 'Flamengo', 'Fortaleza', 'Internacional', 'S√
 
 print(f'O G5 Foi: {tabela[:5]}\n')
 
-print('Os rebaixados foram: {}\n'.format(tabela[16:]))
+print('Os rebaixados foram: {}\n'.format(tabela[-4:]))
 
 print(f'Os times em ordem alfab√©tica {sorted(tabela)}')
 
