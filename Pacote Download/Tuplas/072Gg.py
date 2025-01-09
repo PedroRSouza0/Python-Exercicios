@@ -1,14 +1,16 @@
-extenso = 'Zero' , 'Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis'
+extenso = ('Zero', 'Um', 'Dois', 'Três', 'Quatro', 'Cinco',
+           'Seis', 'Sete')
 
 while True:
-    numero = int(input("Digite um numero de 0 a 6: "))
-    if numero > 6 or numero < 0:
-        print('Digite um valor válido', end= ', ')
+    numero = int(input("Digite um número de 0 a 7: "))
+    if not (0 <= numero <= 7): #Negação
+        print('Digite um valor válido.', end= ', ')
     else:
-        print(f'Você escolheu o número {extenso[numero]}')
+        print(f'Você escolheu o número {extenso[numero]}')    
 
-        print('Voce deseja continuar? [S/N]', end= ': ')
-        opcao = str(input()).upper()
+        print("Você deseja continuar? [S/N]", end= ': ')
+        opcao = str(input()).strip().upper()
 
         if opcao != 'S':
             break
+        
