@@ -1,39 +1,38 @@
 from time import sleep
-i = 0 
-opcao = ' '
+i = 0
+option = ' '
 print('P.A(zada) GAME')
 
-primeiro = int(input('Digite o primeiro termo da P.A: '))
-termos = int(input('Digite o número de termos desta P.A: '))
-razao = int(input('Qual será a razão da P.A?: '))
+first_term = int(input('Enter the first term of the A.P: '))
+num_terms = int(input('Enter the number of terms in this A.P: '))
+difference = int(input('What will be the common difference of the A.P?: '))
 
-while i < termos:
-    print(F'{primeiro}', end = ' -> ')
-    primeiro += razao
+while i < num_terms:
+    print(f'{first_term}', end=' -> ')
+    first_term += difference
     i += 1
-print('FIM')    
+print('END')
 
 while True:
-    opcao = str(input("Gostaria de ver mais alguns termos? [s/n]: ")).strip()
+    option = str(input("Would you like to see more terms? [y/n]: ")).strip()
     
-    if opcao not in ('N', 'n', 's', 'S'):
-        print('Porfavor digite uma opcão válida')
-    elif opcao not in ('N', 'n'):
-        novo = int(input('Quantos termos?: '))
-        termos += novo
+    if option not in ('N', 'n', 'y', 'Y'):
+        print('Please enter a valid option.')
+    elif option not in ('N', 'n'):
+        new_terms = int(input('How many terms?: '))
+        num_terms += new_terms
         
-        for i in range (i, termos):
-            print(f'{primeiro}', end= ' -> ')
-            primeiro += razao
+        for i in range(i, num_terms):
+            print(f'{first_term}', end=' -> ')
+            first_term += difference
             i += 1
 
-    elif opcao in ('n', 'N'):
+    elif option in ('n', 'N'):
         break    
 
-       
     print('PAUSE')
         
-print("FIM")
-print("Saindo...")
+print("END")
+print("Exiting...")
 sleep(1)
-print(f'Programa executado com {termos} progressões.')
+print(f'The program executed with {num_terms} progressions.')
