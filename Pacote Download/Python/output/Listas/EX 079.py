@@ -12,7 +12,7 @@ while True:
         while True:
             opcao = str(input('Deseja continuar? [S/N]: ')).upper().strip()
 
-            if opcao == 'S':
+            if opcao == 'S':  # Da pra simplificar colocando not in, removendo assim o elif, otimizando o codigo
                 break
             elif opcao == 'N':
                 print('\nFinal\n')
