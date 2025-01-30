@@ -1,19 +1,17 @@
-lista = []
+lista = list()
 for i in range(0,5):
     n = int(input('Digite um número: '))
 
-    if i == 0 or n > lista[len(lista) -1 ]:
+    if i == 0 or n > lista[len(lista) - 1]: # Ultimo elemento da lista
         lista.append(n)
-        print('Valor adicionado no final.')
-
-    # Varrer o resto do vetor num por num
+        print('Valor adicionado no final da lista...')
     else:
-        pos = 0
-        while pos < len(lista):
-            if n <= lista[pos]:
-                lista.insert(pos, n)
-                print(f'Valor adicionado na posição {pos}')    
+        # Fazer uma passagem por cada elemento do array
+        ii = 0
+        while ii < len(lista):
+            if n <= lista[ii]: # Pega o elemento do array
+                lista.insert(ii, n)
+                print(f'Valor adicionado na posição {ii}')
                 break
-            pos += 1
-print('FINAL:')            
-print(lista)        
+            ii += 1
+print(lista)    
