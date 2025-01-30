@@ -5,7 +5,8 @@ for i in range(0,5):
     if i == 0 or n > lista[len(lista) -1 ]:
         lista.append(n)
         print('Valor adicionado no final.')
-    # Varrer o resto do vetor
+
+    # Varrer o resto do vetor num por num
     else:
         pos = 0
         while pos < len(lista):
@@ -13,5 +14,6 @@ for i in range(0,5):
                 lista.insert(pos, n)
                 print(f'Valor adicionado na posição {pos}')    
                 break
-
-print(lista)              
+            pos += 1
+print('FINAL:')            
+print(lista)        
