@@ -6,8 +6,9 @@ while True:
     lista.append(num)
     totalnum += 1
 
-    if 5 in lista:
-        totalcinco += 1
+    # if 5 in lista:
+      #  totalcinco += 1 
+      # O compilador entende como (SE EXISTIR 5 +=1) e não como somar apenas o total de cincos
 
     # Tratamento de erro
     op = str(input('Deseja continuar? [S/N]:')).upper().strip()
@@ -18,12 +19,12 @@ while True:
         break   
 
 print()
-print('Total de número digitados: {}'.format(totalnum))
+print('Total de número digitados: {}'.format(len(lista)))
 
 lista.sort(reverse= True)
 print(f'Lista Ordenada ao contrário: {lista}')
 
 if 5 in lista:
-    print('O número 5 apareceu {} vezes'.format(totalcinco))
+    print('O número 5 apareceu ')
 else:
     print('O número 5 não apareceu na lista.')
