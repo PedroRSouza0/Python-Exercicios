@@ -2,7 +2,7 @@ lista = []
 totalnum = 0
 totalcinco = 0
 i = 0
-j = 0
+
 while True:
     num = int(input('Digite um número: '))
     lista.append(num)
