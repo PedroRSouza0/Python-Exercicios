@@ -1,5 +1,4 @@
 expression = list()
-keys = closekeys = 0
 input = str(input('Digite uma expressão qualquer que use parênteses: '))
 
 for parens in input:
