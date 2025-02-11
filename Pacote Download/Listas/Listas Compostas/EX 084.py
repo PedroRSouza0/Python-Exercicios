@@ -9,7 +9,12 @@ while True:
     main_list.clear()
 
     people += 1 # Conta o número de cadastrados
-    for i in range(len(copy_list) ): # Contagem de peso 
+
+    op = str(input("Deseja continuar? [S/N]: "))
+    if op not in 'Ss':
+        break
+    
+for i in range(len(copy_list)): # Contagem de peso 
         '''Bloco com erro "Index out of range"'''
         if i == 0:
             haviest = copy_list[i][i+1]
@@ -18,11 +23,7 @@ while True:
             if copy_list[i][i+1] > haviest:
                 haviest = copy_list[i][i+1]
             if copy_list[i][i+1] < lightest:
-                lightest = copy_list[i][i+1]
-
-    op = str(input("Deseja continuar? [S/N]: "))
-    if op not in 'Ss':
-        break
+                lightest = copy_list[i][i+1]    
 
 print(copy_list)    
 print(f'O Total de pessoas cadastradas: {people}')
