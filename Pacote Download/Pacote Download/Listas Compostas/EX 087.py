@@ -1,5 +1,5 @@
 main_matrix = [[],[],[]]
-somapar = somatres = maior = 0
+somapar = somatres = 0
 #Leitura dos dados
 for i in range(0,3):
     for j in range(0,3):
@@ -7,10 +7,11 @@ for i in range(0,3):
         if num % 2 == 0: # Verifica se o número é par e adiciona na soma
             somapar += num
         if j == 2: # Soma os números da terceira coluna
-            somatres += num
+            somatres += num    
         main_matrix[i].append(num)
 
 print('+='*50)
+maior = main_matrix[1][0]
 
 # Saída dos dados
 for i in range(len(main_matrix)): # Estudar o que o -1 tava causando
@@ -20,4 +21,8 @@ for i in range(len(main_matrix)): # Estudar o que o -1 tava causando
 
 print(f'A soma de todos os números pares da matriz resultou em: {somapar}')
 print(f'A soma de todos os números da terceira coluna foi: {somatres}')
+# Verificando o maior valor da segunda linha
+for n in main_matrix[1]:
+    if n > maior:
+        maior = n
 print(f'O maior valor da segunda linha foi: {maior}')
