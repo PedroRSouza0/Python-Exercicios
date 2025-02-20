@@ -11,7 +11,7 @@ for i in range(0,3):
         main_matrix[i].append(num)
 
 print('+='*50)
-maior = main_matrix[1][0]
+maior = main_matrix[1][0] # INCONSISTÊNCIA Declaro o maior um número que pode não ser o maior
 
 # Saída dos dados
 for i in range(len(main_matrix)): # Estudar o que o -1 tava causando
