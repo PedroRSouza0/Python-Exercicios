@@ -21,6 +21,6 @@ for i in range(0,3):
     people['nombre'] = str(input('Digite o seu nome: '))
     people['idade'] = int(input('Digite a idade: '))
     people.copy()
-print(people.items())    
+print(people.items())    # It doesn't work
 
 '''continue it'''
