@@ -8,7 +8,7 @@ for i in range(1,4+1):
     dic[i] = randint(1,6)
 # Output    
 for k, v in dic.items():
-    print("{} got {}".format(k,v))
+    print("Player {} got {}".format(k,v))
     sleep(1)
 
 print()
