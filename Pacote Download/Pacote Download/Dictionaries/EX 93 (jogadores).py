@@ -13,10 +13,11 @@ data['Golls'] = gols #Insere a lista no dicionário
 data['Total'] = total
 print(data)
 print()
+
 for k, v in data.items():
     print(f'{k} = {v}')
 print()    
-print(f'O jogador jogou {data['Partidas']} partidas') # Arrumar indice
+print(f'O jogador {data['Nome']} jogou {data['Partidas']} partidas') # Arrumar indice
 for i in range(len(gols)):
     print(f'Na partida {i} marcou: {gols[i]}')
 print(f'Totalizando {total}')    
