@@ -38,12 +38,22 @@ while True:
     
     if dados >= len(jogadores) or dados < 0:
         print(f'ERRO! Não existe jogador com o código {dados}.')  # Verifica se o código digitado é válido
+
     else:
-        jogador = jogadores[dados]
+        jogador = jogadores[dados] # Poderia ser feito com loop na lista, acessando as keys com i 
         print(f"\n-- LEVANTAMENTO DO JOGADOR {jogador['Nome']}:")
         print(f"   Número de partidas: {jogador['Partidas']}")
         for i, g in enumerate(jogador['Gols']):
             print(f"   No jogo {i + 1} fez {g} gols.")
+
+        while True:
+            outro = str(input('Deseja ver outro jogador? [S/N]')).upper()
+            if outro in 'SN':
+                break
+            print('Escolha uma opção valida')
+
+        if outro == 'N':
+            print('Fim do programa')
+            break  
+            
         
-        print("\nPrograma finalizado após consulta.")
-        break  # Encerra o programa após mostrar os dados do jogador
