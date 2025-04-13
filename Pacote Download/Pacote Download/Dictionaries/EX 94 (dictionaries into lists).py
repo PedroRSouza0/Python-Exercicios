@@ -28,7 +28,7 @@ while True:
 print(people)
 print(f'O total of people were: {tot}')
 
-for i in range(len(people)):
+for i in range(len(people)): # I could calculate the average while I am getting the values, and in the end I just divide it for the len()
     average += people[i]['Age']
 average/len(people)  # It calculates the average
 print(f'The average was: {average}')
