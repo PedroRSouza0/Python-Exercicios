@@ -2,7 +2,7 @@ jogadores = list()
 
 while True:
     data = dict()  # Dicionário de jogadores (cada jogador é um dicionário)
-    gols = list()
+    gols = list() # Poderia tambem ter apenas limpado cada conjunto
 
     data['Nome'] = str(input('Digite o nome: '))
     data['Partidas'] = int(input(f'Quantas partidas o {data["Nome"]} jogou?: '))
@@ -27,7 +27,10 @@ while True:
 # Exibe todos os jogadores cadastrados
 print('-=' * 50)
 for i, jogador in enumerate(jogadores):
-    print(f"- {i} | Nome: {jogador['Nome']} | Partidas: {jogador['Partidas']} | Gols: {jogador['Gols']} | Total: {jogador['Total']} ")
+    print(f"- {i:>5}",end=' ')
+    for v in jogador.values():
+        print(f'{str(v):<15}',end=' ') #Forçar tudo a ser string para conseguir formatar 
+    print()
 
 # Loop para consultar jogador
 while True:
