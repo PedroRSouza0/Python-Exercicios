@@ -1,6 +1,6 @@
 from time import sleep
 
-def Counter(start, end, step):
+def Counter():
     # First Count
     print('\nFirst one')
     for i in range(1,10+1):
@@ -9,42 +9,42 @@ def Counter(start, end, step):
 
     # Second Count
     print("\nSecond")
-    for i in range(10, -1, 2):
+    for i in range(10, 0, -2):
         print(i, end= ' ')   
         sleep(0.5)    
 
+    print()
+
     # Personal Count
     while True:
-        try: 
-            start = int(input("Start: "))
-            end = int(input('End: '))
-            step_input = input('Step: ').strip()
+        print('~'*20)
+        start = int(input('The First one: '))
+        end = int(input("The Last one: "))
+        step = int(input('Step: '))
 
-            # Tratamento, se vazio == 1
-            if step_input == '' or step_input == 0:
-                step = 1
-            else:
-                step = abs(int(step_input)) # Se negativo vira positivo
-        
-                if step < 0:
-                    step = abs(step)
+        if step < 0:
+            step = abs(step)
+            print(step)
             break
-        except ValueError:
-            print('Entrada invalida')
-
-        # Verificando a contagem
-        if start < end:
-            # Contagem crescente
-            for i in range(start,end+1,step):
-                print(i, end=' ')
+        elif step == 0:
+            step = 1
+        
+        #Contagem crescente
+        if start <= end:
+            for i in range(start, end +1, step):
+                print(i, end= ' ')
                 sleep(0.5)
-
+            break
         # Contagem decrescente
-        elif start > end:
-            for i in range(start,end,-step):
+        if start >= end:
+            for i in range(start, end -1, -step):
                 print(i,end= ' ')
                 sleep(0.5)
-        else:
-            print('Start e end são iguais')
-    
-Counter(1,32,1)
+            break
+        '''if start == end:
+            print('Os valores são iguais')
+            break''' # Corrigir este bloco
+
+
+
+Counter()
