@@ -9,7 +9,7 @@ def Counter():
 
     # Second Count
     print("\nSecond")
-    for i in range(10, 0, -2):
+    for i in range(10, 0-1, -2):
         print(i, end= ' ')   
         sleep(0.5)    
 
@@ -30,20 +30,20 @@ def Counter():
             step = 1
         
         #Contagem crescente
-        if start <= end:
+        if start < end:
             for i in range(start, end +1, step):
                 print(i, end= ' ')
                 sleep(0.5)
             break
         # Contagem decrescente
-        if start >= end:
+        if start > end:
             for i in range(start, end -1, -step):
                 print(i,end= ' ')
                 sleep(0.5)
             break
-        '''if start == end:
+        if start == end:
             print('Os valores são iguais')
-            break''' # Corrigir este bloco
+            break
 
 
 
