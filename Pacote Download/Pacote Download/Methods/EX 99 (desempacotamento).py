@@ -19,3 +19,4 @@ def maior(*num):
 maior(6)
 maior(1,5,2,400,123)
 maior(5,5,1)
+# maior() '''Só funcionaria caso eu tivesse inicializado a variavel com 0'''
