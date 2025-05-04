@@ -2,6 +2,15 @@ from time import sleep
 
 
 def Contador(start, end, step):
+
+    """  Faz uma contagem e mostra na tela
+    Parameter start -> inicio
+    Parameter end -> fim
+    Parameter step -> passo
+    return -> no return
+    
+    """    
+
     if step < 0:
         step = abs(step)
     if step == 0:
